@@ -1,3 +1,106 @@
-# Batalha-Naval-PJBL---RA2
+<div align="center">
+<h1> .𖥔 ݁ ˖ RA2- Batalha Naval !! 🦜</h1>
+<p>
+  <img src="https://img.shields.io/badge/status-concluído-brightgreen" />
+  <img src="https://img.shields.io/badge/contribuidores-2-blue" />
+  <img src="https://img.shields.io/badge/projeto-acadêmico-orange" />
+</p>
 
-oiiiii
+<p>
+  <a href="#introducao">Introdução</a> ★
+  <a href="#menu">Menu</a> ★
+  <a href="#gamemode1">GameMode 1</a> ★
+  <a href="#gamemode2">GameMode 2</a> ★
+  <a href="#finalizacao">Finalização</a>
+</p>
+</div>
+
+---
+
+## 🏴‍☠️.✦ ݁˖ Introdução: <a id="introducao"></a>
+
+### ⋆˙⟡ O que é Batalha Naval?
+Batalha Naval é um jogo de estratégia para dois jogadores, cujo objetivo é afundar todos os navios do oponente antes que os seus sejam destruídos.
+
+### ⋆˙⟡ Explicação do Projeto:
+O projeto consiste na implementação do jogo Batalha Naval em Python.
+Ele foi desenvolvido para permitir diferentes modos de interação:
+* Humano x Máquina: o jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
+* Sair do Programa.
+
+### ⋆˙⟡ Contexto Acadêmico:
+Este projeto foi desenvolvido como parte da disciplina de Raciocínio Algorítmico, no primeiro período do curso de Ciências da Computação.
+
+### ⋆˙⟡ Estilo Visual:
+O projeto foi desenvolvido com uma estética colorida e divertida, utilizando as cores vermelho, azul e amarelo como base.
+Essas cores foram escolhidas por remeterem a elementos piratas e bruscos, como navios e animais marinhos, criando uma atmosfera lúdica e acolhedora para o jogo.
+Entre os elementos visuais aplicados estão:
+* Códigos de cor para estilizar o menu e as mensagens no terminal;
+* Símbolos decorativos que reforçam a temática de piratas;
+
+### ⋆˙⟡ Conceitos de Programação Aplicados:
+* Estruturas de repetição (while/for);
+* Estruturas condicionais (if/elif/else);
+* Validação de entradas;
+* Biblioteca random;
+* Estilização com códigos;
+* Funções (def + return);
+* Lista simples (vetor);
+* Matriz (lista de listas).
+
+
+### ⋆˙⟡ Fluxograma:
+<div align="center">
+
+</div>
+
+---
+
+## 🌕.✦ ݁˖ Menu: <a id="menu"></a>
+<div align="center">
+
+</div>
+
+O menu inicial apresenta duas opções de jogo:
+
+* Humano x Máquina  
+* Sair do Programa
+
+
+Ele foi estilizado com cores e símbolos para criar uma experiência mais divertida.  
+Caso o usuário digite uma opção inválida, o programa exibe uma mensagem de erro e solicita novamente.
+
+---
+
+## ☠️ ᛝ GameMode 1: <a id="gamemode1"></a>
+<div align="center">
+
+</div>
+
+O jogador humano escolhe sua jogada, enquanto a máquina gera uma jogada aleatória.
+O jogador pode optar por continuar ou encerrar.
+
+---
+
+## ☠️ ᛝ GameMode 2: <a id="gamemode2"></a>
+<div align="center">
+
+</div>
+
+Encerra o programa e exibe nossos créditos.
+
+---
+
+## ☠️ ᛝ Finalização: <a id="finalizacao"></a>
+
+### ࣪ ִֶָ☾. Tecnologias Utilizadas:
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
+[![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
+[![PyCharm](https://img.shields.io/badge/PyCharm-000?logo=pycharm&logoColor=fff)](#)&nbsp;
+
+### ࣪ ִֶָ☾. Alunos Contribuintes:
+| Nome | GitHub |
+|---|---|
+| Lucas Dinnies | [@LRDinnies](https://github.com/LRDinnies) |
+| Mariana Pondé | [@Mariszpon](https://github.com/Mariszpon) |
