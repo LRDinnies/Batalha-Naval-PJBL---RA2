@@ -11,34 +11,38 @@
   <a href="#menu">Menu</a> ★
   <a href="#gamemode1">GameMode 1</a> ★
   <a href="#gamemode2">GameMode 2</a> ★
+  <a href="#gamemode3">GameMode 3</a> ★
+  <a href="#gamemode4">GameMode 4</a> ★
   <a href="#finalizacao">Finalização</a>
 </p>
 </div>
 
 ---
 
-## 🏴‍☠️.✦ ݁˖ Introdução: <a id="introducao"></a>
+## 🏴‍☠️ ⤿ Introdução: <a id="introducao"></a>
 
-### ⋆˙⟡ O que é Batalha Naval?
+### ˖᯽ ݁˖ O que é Batalha Naval?
 Batalha Naval é um jogo de estratégia para dois jogadores, cujo objetivo é afundar todos os navios do oponente antes que os seus sejam destruídos.
 
-### ⋆˙⟡ Explicação do Projeto:
+### ˖᯽ ݁˖ Explicação do Projeto:
 O projeto consiste na implementação do jogo Batalha Naval em Python.
 Ele foi desenvolvido para permitir diferentes modos de interação:
-* Humano x Máquina: o jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
+* Modo fácil ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
+* Modo Padrão ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
+* Bossfight ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias. As bombas são maiores.
 * Sair do Programa.
 
-### ⋆˙⟡ Contexto Acadêmico:
+### ˖᯽ ݁˖ Contexto Acadêmico:
 Este projeto foi desenvolvido como parte da disciplina de Raciocínio Algorítmico, no primeiro período do curso de Ciências da Computação.
 
-### ⋆˙⟡ Estilo Visual:
+### ˖᯽ ݁˖ Estilo Visual:
 O projeto foi desenvolvido com uma estética colorida e divertida, utilizando as cores vermelho, azul e amarelo como base.
 Essas cores foram escolhidas por remeterem a elementos piratas e bruscos, como navios e animais marinhos, criando uma atmosfera lúdica e acolhedora para o jogo.
 Entre os elementos visuais aplicados estão:
 * Códigos de cor para estilizar o menu e as mensagens no terminal;
 * Símbolos decorativos que reforçam a temática de piratas;
 
-### ⋆˙⟡ Conceitos de Programação Aplicados:
+### ˖᯽ ݁˖ Conceitos de Programação Aplicados:
 * Estruturas de repetição (while/for);
 * Estruturas condicionais (if/elif/else);
 * Validação de entradas;
@@ -49,21 +53,23 @@ Entre os elementos visuais aplicados estão:
 * Matriz (lista de listas).
 
 
-### ⋆˙⟡ Fluxograma:
+### ˖᯽ ݁˖ Fluxograma:
 <div align="center">
 
 </div>
 
 ---
 
-## 🌕.✦ ݁˖ Menu: <a id="menu"></a>
+## 🏴‍☠️ ⤿ Menu: <a id="menu"></a>
 <div align="center">
 
 </div>
 
 O menu inicial apresenta duas opções de jogo:
 
-* Humano x Máquina  
+* Modo fácil: Humano x Máquina
+* Modo Padrão: Humano x Máquina
+* Bossfight: Humano x Máquina
 * Sair do Programa
 
 
@@ -72,17 +78,45 @@ Caso o usuário digite uma opção inválida, o programa exibe uma mensagem de e
 
 ---
 
-## ☠️ ᛝ GameMode 1: <a id="gamemode1"></a>
+## 🏴‍☠️ ⤿ GameMode 1: <a id="gamemode1"></a>
 <div align="center">
 
 </div>
 
 O jogador humano escolhe sua jogada, enquanto a máquina gera uma jogada aleatória.
+Cada navio ocupa apenas um bloco. É o modo mais simples para aprender, testar e aprender a lógica do jogo.
 O jogador pode optar por continuar ou encerrar.
 
 ---
 
-## ☠️ ᛝ GameMode 2: <a id="gamemode2"></a>
+## 🏴‍☠️ ⤿ GameMode 2: <a id="gamemode2"></a>
+<div align="center">
+
+</div>
+
+O jogador humano escolhe sua jogada, enquanto a máquina gera uma jogada aleatória.
+Cada navio ocupa tamanhos diferentes de bloco. É o modo padrão. Por exemplo:
+* Porta- aviões: 5 blocos;
+* Navio-tanque: 4 blocos;
+* Contratorpedeiro: 3 blocos;
+* Submarino: 2 blocos;
+* Destroyer: 1 bloco.
+Só afunda quando todas as partes forem atingidas.
+O jogador pode optar por continuar ou encerrar.
+
+---
+
+## 🏴‍☠️ ⤿ GameMode 3: <a id="gamemode3"></a>
+<div align="center">
+
+</div>
+
+Nesse modo de jogo, as bombas são maiores. Isso significa que uma jogada pode acertar várias posições de uma vez.
+O jogador pode optar por continuar ou encerrar.
+
+---
+
+## 🏴‍☠️ ⤿ GameMode 4: <a id="gamemode4"></a>
 <div align="center">
 
 </div>
@@ -91,15 +125,15 @@ Encerra o programa e exibe nossos créditos.
 
 ---
 
-## ☠️ ᛝ Finalização: <a id="finalizacao"></a>
+## 🏴‍☠️ ⤿ Finalização: <a id="finalizacao"></a>
 
-### ࣪ ִֶָ☾. Tecnologias Utilizadas:
+### ˖᯽ ݁˖ Tecnologias Utilizadas:
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)&nbsp;
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)
 [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
 [![PyCharm](https://img.shields.io/badge/PyCharm-000?logo=pycharm&logoColor=fff)](#)&nbsp;
 
-### ࣪ ִֶָ☾. Alunos Contribuintes:
+### ˖᯽ ݁˖ Alunos Contribuintes:
 | Nome | GitHub |
 |---|---|
 | Lucas Dinnies | [@LRDinnies](https://github.com/LRDinnies) |
