@@ -118,7 +118,7 @@ O jogador pode optar por continuar ou encerrar.
 
 ## 🏴‍☠️ ⤿ GameMode 4: <a id="gamemode4"></a>
 <div align="center">
-
+<img width="428" height="96" alt="image" src="https://github.com/user-attachments/assets/6fd3b3a1-723c-4daf-9c8e-5388c149c588" />
 </div>
 
 Encerra o programa e exibe nossos créditos.
