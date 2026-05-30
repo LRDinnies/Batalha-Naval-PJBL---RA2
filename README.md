@@ -7,12 +7,12 @@
 </p>
 
 <p>
-  <a href="#introducao">Introdução</a> ★
-  <a href="#menu">Menu</a> ★
-  <a href="#gamemode1">GameMode 1</a> ★
-  <a href="#gamemode2">GameMode 2</a> ★
-  <a href="#gamemode3">GameMode 3</a> ★
-  <a href="#gamemode4">GameMode 4</a> ★
+  <a href="#introducao">Introdução</a> ☠︎
+  <a href="#menu">Menu</a> ☠︎
+  <a href="#gamemode1">GameMode 1</a> ☠︎
+  <a href="#gamemode2">GameMode 2</a> ☠︎
+  <a href="#gamemode3">GameMode 3</a> ☠︎
+  <a href="#gamemode4">GameMode 4</a> ☠︎
   <a href="#finalizacao">Finalização</a>
 </p>
 </div>
