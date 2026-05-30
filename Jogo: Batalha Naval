@@ -31,7 +31,24 @@ while verify == 0:
 # Se o número for inválido (>3 ou 0>=), aparece a mensagem de erro e o programa volta a pedir a escolha.
 
 if gameMode == 1:
-    print("➢ ℌ𝔲𝔪𝔞𝔫𝔬 𝔵 ℌ𝔲𝔪𝔞𝔫𝔬 (1) ۫ ׅ ✧")
+    print("➢ ℌ𝔲𝔪𝔞𝔫𝔬 𝔵 𝔐𝔞́𝔮𝔲𝔦𝔫𝔞: 𝔐𝔬𝔡𝔬 𝔉𝔞́𝔠𝔦𝔩 (1) ۫ ׅ ✧")
     print()
 
     # Se o usuário escolheu 1 no menu, o programa entra nesse bloco.
+
+if gameMode == 2:
+    print("➢ ℌ𝔲𝔪𝔞𝔫𝔬 𝔵 𝔐𝔞́𝔮𝔲𝔦𝔫𝔞: 𝔐𝔬𝔡𝔬 𝔓𝔞𝔡𝔯𝔞̃𝔬 (2) ۫ ׅ ✧")
+    print()
+
+    # Se o usuário escolheu 2 no menu, o programa entra nesse bloco.
+
+if gameMode == 3:
+    print("➢ ℌ𝔲𝔪𝔞𝔫𝔬 𝔵 𝔐𝔞́𝔮𝔲𝔦𝔫𝔞: 𝔅𝔬𝔰𝔰𝔣𝔦𝔤𝔥𝔱 (𝔐𝔬𝔡𝔬 𝔇𝔦𝔣𝔦́𝔠𝔦𝔩) (3) ۫ ׅ ✧")
+    print()
+
+    # Se o usuário escolheu 3 no menu, o programa entra nesse bloco.
+
+if gameMode == 4:
+    print("\033[31m ✶⋆.˚ 𝕿𝖗𝖆𝖇𝖆𝖑𝖍𝖔 𝖋𝖊𝖎𝖙𝖔 𝖕𝖔𝖗 𝕷𝖚𝖈𝖆𝖘 𝕯𝖎𝖓𝖓𝖎𝖊𝖘 𝖊 𝕸𝖆𝖗𝖎𝖆𝖓𝖆 𝕻𝖔𝖓𝖉𝖊́ ‹𝟹\033[0m")
+
+    # Se o usuário escolheu 4 no menu, o programa entra nesse bloco.
