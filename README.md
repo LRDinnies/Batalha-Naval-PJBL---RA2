@@ -29,7 +29,7 @@ O projeto consiste na implementação do jogo Batalha Naval em Python.
 Ele foi desenvolvido para permitir diferentes modos de interação:
 * Modo fácil ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
 * Modo Padrão ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
-* Bossfight ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias. As bombas são maiores.
+* Bossfight (Modo Difícil) ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias. As bombas são maiores.
 * Sair do Programa.
 
 ### ˖᯽ ݁˖ Contexto Acadêmico:
@@ -65,11 +65,11 @@ Entre os elementos visuais aplicados estão:
 
 </div>
 
-O menu inicial apresenta duas opções de jogo:
+O menu inicial apresenta quatro opções de jogo:
 
 * Modo fácil: Humano x Máquina
 * Modo Padrão: Humano x Máquina
-* Bossfight: Humano x Máquina
+* Bossfight (Modo Difícil): Humano x Máquina
 * Sair do Programa
 
 
