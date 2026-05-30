@@ -1,3 +1,4 @@
+<img width="368" height="275" alt="image" src="https://github.com/user-attachments/assets/ad276ca6-0bc0-401b-ad69-323153fcfec0" />
 <div align="center">
 <h1> .𖥔 ݁ ˖ RA2- Batalha Naval !! 🦜</h1>
 <p>
@@ -62,7 +63,7 @@ Entre os elementos visuais aplicados estão:
 
 ## 🏴‍☠️ ⤿ Menu: <a id="menu"></a>
 <div align="center">
-
+<img width="368" height="275" alt="image" src="https://github.com/user-attachments/assets/8231c90a-317b-4779-a749-7b4cde9effdd" />
 </div>
 
 O menu inicial apresenta quatro opções de jogo:
