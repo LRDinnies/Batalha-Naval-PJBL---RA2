@@ -1,0 +1,80 @@
+import time
+import random
+
+tabuleiroPL = [
+    ['X', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'],
+    ['①', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['②', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['③', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['④', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑤', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑥', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑦', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑧', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑨', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑩', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+]
+
+tabuleiroPC = [
+    ['X', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'],
+    ['①', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['②', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['③', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['④', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑤', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑥', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑦', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑧', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑨', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑩', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+]
+
+print('Selecione a posição dos navios!!')
+print()
+print('Esse é seu tabuleiro: ')
+print('=' * 40)
+print()
+for linha in tabuleiroPL:
+    print(' '.join(linha))
+
+
+celulaUsadaPL = []
+for i in range(5):
+    print(f'Selecione a celula do navio {i+1}: ')
+    while True:
+        X = int(input(f'Selecione o X do navio {i+1}: '))
+        Y = int(input(f'Selecione o Y do navio {i+1}: '))
+        if (X or Y) == 0:
+            print('Celula nao permitida!!! Tente novamente')
+        elif (X, Y) in celulaUsadaPL:
+            print('Essa celula ja foi escolhida! Tente outra.')
+        else:
+            celulaUsadaPL.append((X, Y))
+            break
+
+    print()
+    print('Tabuleiro atual:')
+    print('=' * 40)
+    tabuleiroPL[X][Y] = '𓊝'
+    for linha in tabuleiroPL:
+        print(' '.join(linha))
+    print()
+
+print('O computador esta selecionando suas posicoes...')
+celulaUsadaPC = []
+for i in range(5):
+    while True:
+        X = random.randint(1, 10)
+        Y = random.randint(1, 10)
+        if (X or Y) == 0:
+            pass
+        elif (X, Y) in celulaUsadaPC:
+            pass
+        else:
+            celulaUsadaPC.append((X, Y))
+            break
+    
+    tabuleiroPC[X][Y] = '𓊝'
+
+for linha in tabuleiroPC:
+    print(' '.join(linha))
