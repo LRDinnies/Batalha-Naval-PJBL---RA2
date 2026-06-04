@@ -1,0 +1,270 @@
+import time
+import random
+import os
+import pygame
+
+pygame.init()
+pygame.mixer.init()
+print(pygame.mixer.get_init())
+pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
+pygame.mixer.music.set_volume(0)
+pygame.mixer.music.play(-1)
+
+def limpar_tela():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def animar_canhao(acertou=True):
+    """
+    Anima o canhão atirando no terminal.
+    acertou=True  → mostra BOOM! (acerto)
+    acertou=False → mostra splash (água)
+    """
+
+    # Cada item da lista é um frame da animação
+    # O canhão aponta pra direita, e a bala viaja até o alvo
+    frames = [
+        # Frame 1 — canhão parado, antes de atirar
+        [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                                ",
+            "  |====]                                ",
+            "  |____|                                ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ],
+        # Frame 2 — disparo! bala saindo
+        [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                                ",
+            "  |====] o                              ",
+            "  |____|                                ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ],
+        # Frame 3 — bala viajando
+        [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                                ",
+            "  |====]       o                        ",
+            "  |____|                                ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ],
+        # Frame 4 — bala quase chegando
+        [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                                ",
+            "  |====]              o                 ",
+            "  |____|                                ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ],
+        # Frame 5 — impacto (muda dependendo se acertou ou não)
+        [],  # será preenchido abaixo
+    ]
+
+    # Define o frame de impacto com base no resultado
+    if acertou:
+        frames[4] = [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                      * BOOM! * ",
+            "  |====]                   ***  X  ***  ",
+            "  |____|                      *****     ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ]
+    else:
+        frames[4] = [
+            "                                        ",
+            "   ____                                 ",
+            "  |    |                                ",
+            "  |====]                   splash~      ",
+            "  |____|                    ~~~o~~~     ",
+            " /  ()  \\                              ",
+            "----------                              ",
+        ]
+
+    # Velocidade entre os frames (em segundos)
+    velocidades = [0.4, 0.2, 0.2, 0.2, 0.6]
+
+    # Roda a animação frame a frame
+    for i, frame in enumerate(frames):
+        limpar_tela()
+        for linha in frame:
+            print(linha)
+        time.sleep(velocidades[i])
+
+    # Mensagem final após a animação
+    limpar_tela()
+    if acertou:
+        print("\n  💥 DIRETO NO ALVO! Navio afundado!\n")
+    else:
+        print("\n  🌊 Errou! A bala caiu na água...\n")
+
+    time.sleep(1)
+
+
+tabuleiroPL = [
+    ['X', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'],
+    ['①', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['②', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['③', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['④', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑤', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑥', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑦', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑧', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑨', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑩', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+]
+
+tabuleiroPC = [
+    ['X', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'],
+    ['①', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['②', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['③', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['④', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑤', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑥', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑦', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑧', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑨', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑩', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+]
+
+tabuleiroPCAtk = [
+    ['X', '①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩'],
+    ['①', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['②', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['③', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['④', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑤', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑥', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑦', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑧', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑨', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~'],
+    ['⑩', '~', '~', '~', '~', '~', '~', '~', '~', '~', '~']
+]
+
+print('Selecione a posição dos navios!!')
+print()
+print('Esse é seu tabuleiro: ')
+print('=' * 40)
+print()
+for linha in tabuleiroPL:
+    print(' '.join(linha))
+
+
+celulaUsadaPL = []
+for i in range(5):
+    print(f'Selecione a celula do navio {i+1}: ')
+    while True:
+        X = int(input(f'Selecione o X do navio {i+1}: '))
+        Y = int(input(f'Selecione o Y do navio {i+1}: '))
+        if X == 0 or Y == 0:
+            print('Celula nao permitida!!! Tente novamente')
+        elif (Y, X) in celulaUsadaPL:
+            print('Essa celula ja foi escolhida! Tente outra.')
+        else:
+            celulaUsadaPL.append((Y, X))
+            break
+
+    print()
+    print('Tabuleiro atual:')
+    print('=' * 40)
+    tabuleiroPL[Y][X] = '𓊝'
+    for linha in tabuleiroPL:
+        print(' '.join(linha))
+    print()
+
+print('O computador esta selecionando suas posicoes...')
+celulaUsadaPC = []
+for i in range(5):
+    while True:
+        X = random.randint(1, 10)
+        Y = random.randint(1, 10)
+        if X == 0 or Y == 0:
+            pass
+        elif (Y, X) in celulaUsadaPC:
+            pass
+        else:
+            celulaUsadaPC.append((Y, X))
+            break
+    
+    tabuleiroPC[Y][X] = '1'
+
+print('='*40)
+print('ambos estao prontos, agora selecione a celula que deseja atacar: ')
+while True:
+    celulaAtacadaPL = []
+    naviosPC = sum(linha.count('1') for linha in tabuleiroPC)
+    if naviosPC == 0:
+        print('🏆 VOCÊ GANHOU! Todos os navios inimigos foram afundados!')
+        break
+
+    print('Sua vez de atacar:')
+    X = int(input('Escolha o valor X a ser atacado: '))
+    Y = int(input('Escolha o valor Y a ser atacado: '))
+    if X == 0 or Y == 0:
+        print('Celula invalida!!!')
+    elif (Y, X) in celulaAtacadaPL:
+        print('Celula ja atacada!!!')
+    else:
+        celulaAtacadaPL.append((Y, X))
+        if tabuleiroPC[Y][X] == '1':
+            animar_canhao(acertou=True)
+            tabuleiroPC[Y][X] = '💥'
+            tabuleiroPCAtk[Y][X] = '💥'
+            print('Tabuleiro do computador: ')
+            for linha in tabuleiroPCAtk:
+                print(' '.join(linha))
+        else:
+            animar_canhao(acertou=False)
+            tabuleiroPC[Y][X] = '🌀​'
+            tabuleiroPCAtk[Y][X] = '🌀​'
+            print('Tabuleiro do computador: ')
+            for linha in tabuleiroPCAtk:
+                print(' '.join(linha))
+    
+        naviosPC = sum(linha.count('1') for linha in tabuleiroPC)
+        if naviosPC == 0:
+            print('🏆 VOCÊ GANHOU! Todos os navios inimigos foram afundados!')
+            break
+        else:
+            pass
+    print('Vez do computador:')
+    celulaAtacadaPC =[]
+    X = random.randint(1, 10)
+    Y = random.randint(1, 10)
+    if X == 0 or Y == 0:
+        pass
+    elif (Y, X) in celulaAtacadaPC:
+        pass
+    else:
+        celulaAtacadaPC.append((Y, X))
+        if tabuleiroPL[Y][X] == '𓊝':
+            animar_canhao(acertou=True)
+            tabuleiroPL[Y][X] = '💥'
+        else:
+            animar_canhao(acertou=False)
+            tabuleiroPL[Y][X] = '🌀​'
+        
+        print('Seu tabuleiro: ')
+        for linha in tabuleiroPL:
+            print(' '.join(linha))
+        
+        print('Tabuleiro do computador: ')
+        for linha in tabuleiroPCAtk:
+            print(' '.join(linha))
+
+        naviosPL = sum(linha.count('𓊝') for linha in tabuleiroPL)
+        if naviosPL == 0:
+            print('💀 VOCÊ PERDEU! Todos os seus navios foram afundados!')
+            break
+        else:
+            pass
