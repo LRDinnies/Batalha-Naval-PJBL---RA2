@@ -293,11 +293,13 @@ def loop_de_jogo(tabuleiroPL, tabuleiroPLFB, tabuleiroPC, tabuleiroPCFB):
 
     # Células já atacadas pelo jogador — também fora do loop pelo mesmo motivo
     celulaAtacadaPL = set()
+
+    #audio
     pygame.mixer.music.stop()
-    print(pygame.mixer.get_init())
     pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
     pygame.mixer.music.set_volume(0)
     pygame.mixer.music.play(-1)
+
     # Conta os navios iniciais de cada lado
     naviosPC = sum(linha.count('1') for linha in tabuleiroPC)
     naviosPL = sum(linha.count('𓊝') for linha in tabuleiroPL)
@@ -587,11 +589,14 @@ def loop_de_jogo_padrao(tabuleiroPL, tabuleiroPLFB, tabuleiroPC, tabuleiroPCFB, 
 
     celulaAtacadaPC = set()
     celulaAtacadaPL = set()
+
+    #audio
     pygame.mixer.music.stop()
-    print(pygame.mixer.get_init())
     pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
     pygame.mixer.music.set_volume(0)
     pygame.mixer.music.play(-1)
+
+    
     naviosPC = contar_navios_vivos_padrao(dadosPC)
     naviosPL = contar_navios_vivos_padrao(dadosPL)
 
