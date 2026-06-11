@@ -12,7 +12,6 @@
   <a href="#gamemode1">GameMode 1</a> ☠︎
   <a href="#gamemode2">GameMode 2</a> ☠︎
   <a href="#gamemode3">GameMode 3</a> ☠︎
-  <a href="#gamemode4">GameMode 4</a> ☠︎
   <a href="#finalizacao">Finalização</a>
 </p>
 </div>
@@ -29,7 +28,6 @@ O projeto consiste na implementação do jogo Batalha Naval em Python.
 Ele foi desenvolvido para permitir diferentes modos de interação:
 * Modo fácil ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
 * Modo Padrão ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias.
-* Bossfight (Modo Difícil) ➺ Humano x Máquina: O jogador humano enfrenta a máquina, que escolhe jogadas aleatórias. As bombas são maiores.
 * Sair do Programa.
 
 ### ˖᯽ ݁˖ Contexto Acadêmico:
@@ -69,7 +67,6 @@ O menu inicial apresenta quatro opções de jogo:
 
 * Modo fácil: Humano x Máquina
 * Modo Padrão: Humano x Máquina
-* Bossfight (Modo Difícil): Humano x Máquina
 * Sair do Programa
 
 
@@ -106,7 +103,7 @@ O jogador pode optar por continuar ou encerrar.
 
 ---
 
-## 🏴‍☠️ ⤿ GameMode 3: <a id="gamemode4"></a>
+## 🏴‍☠️ ⤿ GameMode 3: <a id="gamemode3"></a>
 <div align="center">
 <img width="428" height="96" alt="image" src="https://github.com/user-attachments/assets/6fd3b3a1-723c-4daf-9c8e-5388c149c588" />
 </div>
