@@ -8,16 +8,10 @@
 import os
 import time
 import random
+import pygame
 
-# O pygame está comentado pois no momento estamos rodando no Windows.
-# No Linux basta tirar o comentário das linhas abaixo pra a música tocar!
-#import pygame
-#pygame.init()
-#pygame.mixer.init()
-#print(pygame.mixer.get_init())
-#pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
-#pygame.mixer.music.set_volume(0)
-#pygame.mixer.music.play(-1)
+pygame.init()
+pygame.mixer.init()
 
 # - - - Função: limpar_tela - - -
 def limpar_tela():
@@ -299,7 +293,11 @@ def loop_de_jogo(tabuleiroPL, tabuleiroPLFB, tabuleiroPC, tabuleiroPCFB):
 
     # Células já atacadas pelo jogador — também fora do loop pelo mesmo motivo
     celulaAtacadaPL = set()
-
+    pygame.mixer.music.stop()
+    print(pygame.mixer.get_init())
+    pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
+    pygame.mixer.music.set_volume(0)
+    pygame.mixer.music.play(-1)
     # Conta os navios iniciais de cada lado
     naviosPC = sum(linha.count('1') for linha in tabuleiroPC)
     naviosPL = sum(linha.count('𓊝') for linha in tabuleiroPL)
@@ -475,8 +473,8 @@ def posicionar_navios_jogador_padrao(tabuleiroPL):
                 if direcao not in ('H', 'V'):
                     print('Digite H ou V!')
                     continue
-                y = int(input('Linha (1-10): '))
-                x = int(input('Coluna (1-10): '))
+                x = int(input('Coluna / X (1-10): '))
+                y = int(input('Linha  / Y (1-10): '))
             except ValueError:
                 print('Digite números válidos!')
                 continue
@@ -589,7 +587,11 @@ def loop_de_jogo_padrao(tabuleiroPL, tabuleiroPLFB, tabuleiroPC, tabuleiroPCFB, 
 
     celulaAtacadaPC = set()
     celulaAtacadaPL = set()
-
+    pygame.mixer.music.stop()
+    print(pygame.mixer.get_init())
+    pygame.mixer.music.load('/home/b4karalhos/Music/SpearOfJustice.mp3')
+    pygame.mixer.music.set_volume(0)
+    pygame.mixer.music.play(-1)
     naviosPC = contar_navios_vivos_padrao(dadosPC)
     naviosPL = contar_navios_vivos_padrao(dadosPL)
 
@@ -730,7 +732,9 @@ def modo_padrao():
 def exibir_menu():
     # Essa função só cuida de mostrar o menu bonito na tela.
     # Ela não pergunta nada, só exibe as opções pro jogador ver!
-
+    pygame.mixer.music.load('/home/b4karalhos/Music/StartMenu.mp3')
+    pygame.mixer.music.set_volume(1.0)
+    pygame.mixer.music.play(-1)
     limpar_tela()
     print()
 
