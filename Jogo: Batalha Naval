@@ -814,9 +814,4 @@ def main():
         # Sair do programa com mensagem de créditos
         print("\033[31m ✶⋆.˚ 𝕿𝖗𝖆𝖇𝖆𝖑𝖍𝖔 𝖋𝖊𝖎𝖙𝖔 𝖕𝖔𝖗 𝕷𝖚𝖈𝖆𝖘 𝕯𝖎𝖓𝖓𝖎𝖊𝖘 𝖊 𝕸𝖆𝖗𝖎𝖆𝖓𝖆 𝕻𝖔𝖓𝖉𝖾́ ‹𝟹\033[0m")
         exit()
-
-# - - - Ponto de entrada - - -
-# Essa linha garante que o main() só roda quando executamos esse arquivo diretamente.
-# Se outro arquivo importar esse código, o main() não é chamado automaticamente!
-if __name__ == '__main__':
-    main()
+main()
